@@ -1,6 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Font.res" type="DynamicFont" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://MenuBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Opciones.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Inicio.tscn" type="PackedScene" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -21,6 +25,24 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.658824, 1, 1, 0.309804 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.658824, 0.8, 0.784314, 0.945098 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.541176, 1, 0.968627, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2( 3, 3 )
+
 [sub_resource type="Theme" id=4]
 default_font = ExtResource( 1 )
 /fonts/Default = null
@@ -29,16 +51,21 @@ Button/styles/focus = SubResource( 1 )
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 1 )
 Button/styles/pressed = SubResource( 3 )
+Panel/styles/panel = SubResource( 5 )
+PanelContainer/styles/panel = SubResource( 6 )
 
-[node name="Control" type="Control"]
+[node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+Opciones = ExtResource( 4 )
+PrimeraEscena = ExtResource( 5 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
@@ -49,37 +76,47 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ViewportContainer" type="ViewportContainer" parent="HBoxContainer"]
-margin_right = 510.0
+[node name="Control" type="Control" parent="HBoxContainer"]
+margin_right = 338.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Viewport" type="Viewport" parent="HBoxContainer/ViewportContainer"]
-size = Vector2( 240, 480 )
+[node name="Control2" type="Control" parent="HBoxContainer"]
+margin_left = 342.0
+margin_right = 681.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 514.0
+margin_left = 685.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Iniciar" type="Button" parent="HBoxContainer/VBoxContainer"]
 margin_top = 182.0
-margin_right = 510.0
+margin_right = 339.0
 margin_bottom = 258.0
 text = "Iniciar"
 
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Opciones" type="Button" parent="HBoxContainer/VBoxContainer"]
 margin_top = 262.0
-margin_right = 510.0
+margin_right = 339.0
 margin_bottom = 338.0
 text = "Opciones"
 
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Salir" type="Button" parent="HBoxContainer/VBoxContainer"]
 margin_top = 342.0
-margin_right = 510.0
+margin_right = 339.0
 margin_bottom = 418.0
 text = "Salir"
+
+[node name="Spatial" parent="." instance=ExtResource( 3 )]
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Iniciar" to="." method="_on_Iniciar_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Opciones" to="." method="_on_Opciones_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Salir" to="." method="_on_Salir_pressed"]

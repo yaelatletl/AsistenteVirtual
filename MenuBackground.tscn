@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://envs/photo_studio_01_1k.hdr" type="Texture" id=1]
+
+[sub_resource type="PanoramaSky" id=3]
+panorama = ExtResource( 1 )
+
+[sub_resource type="Environment" id=4]
+background_mode = 2
+background_sky = SubResource( 3 )
+
+[sub_resource type="PlaneMesh" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.994707, 0.00376914, 0.102687, 0, 0.999327, -0.0366804, -0.102756, 0.0364863, 0.994037, 1.90646, 1.01765, 7.44304 )
+
+[node name="BakedLightmap" type="BakedLightmap" parent="."]
+
+[node name="SpotLight" type="SpotLight" parent="BakedLightmap"]
+transform = Transform( 0.848011, -0.160787, -0.504999, 0.529978, 0.257273, 0.808043, 0, -0.952868, 0.303384, -6.54063, 6.19735, 4.93348 )
+spot_range = 18.1892
+spot_angle = 67.5
+
+[node name="MeshInstance" type="MeshInstance" parent="BakedLightmap"]
+transform = Transform( 7.87536, 0, 0, 0, 7.87536, 0, 0, 0, 7.87536, 0, 0, 0 )
+use_in_baked_light = true
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="BakedLightmap"]
+transform = Transform( -7.87536, 6.88486e-07, 0, -6.88486e-07, -7.87536, 0, 0, 0, 7.87536, 0, 6.9134, 0 )
+use_in_baked_light = true
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="BakedLightmap"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0286473, 0 )
+use_in_baked_light = true
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="BakedLightmap"]
+transform = Transform( 1.5236, 0, 0, 0, 0.629126, 0, 0, 0, 0.629126, 1.78847, 0.0286473, 0 )
+use_in_baked_light = true
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="BakedLightmap"]
+transform = Transform( 12.1273, 0, 0, 0, 4.32039, 0, 0, 0, 0.629126, 1.78847, 2.84504, -4.67882 )
+use_in_baked_light = true
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="BakedLightmap"]
+transform = Transform( -5.30103e-07, 0, 0.629126, 0, 4.32039, 0, -12.1273, 0, -2.75e-08, -8.65657, 2.84504, -4.67882 )
+use_in_baked_light = true
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="BakedLightmap"]
+transform = Transform( -5.30103e-07, 0, 0.629126, 0, 4.32039, 0, -12.1273, 0, -2.75e-08, 7.98575, 2.84504, -4.67882 )
+use_in_baked_light = true
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
