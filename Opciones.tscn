@@ -1,10 +1,13 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Control" type="Control"]
+[ext_resource path="res://Opciones.gd" type="Script" id=1]
+
+[node name="Opciones" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -54,139 +57,148 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel"]
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 672.0
-margin_bottom = 390.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 670.0
+margin_bottom = 388.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer"]
-margin_top = 34.0
-margin_right = 327.0
-margin_bottom = 350.0
+margin_top = 153.0
+margin_right = 325.0
+margin_bottom = 227.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-margin_right = 327.0
-margin_bottom = 76.0
+margin_right = 325.0
+margin_bottom = 14.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Audio"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-margin_top = 80.0
-margin_right = 327.0
-margin_bottom = 156.0
+margin_top = 18.0
+margin_right = 325.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 161.0
-margin_bottom = 76.0
+margin_top = 1.0
+margin_right = 160.0
+margin_bottom = 15.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "General"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 165.0
-margin_top = 30.0
-margin_right = 327.0
-margin_bottom = 46.0
+[node name="VolGeneral" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 164.0
+margin_right = 325.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
+value = 100.0
+tick_count = 10
+ticks_on_borders = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-margin_top = 160.0
-margin_right = 327.0
-margin_bottom = 236.0
+margin_top = 38.0
+margin_right = 325.0
+margin_bottom = 54.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer2"]
-margin_right = 161.0
-margin_bottom = 76.0
+margin_top = 1.0
+margin_right = 160.0
+margin_bottom = 15.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Voces"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 165.0
-margin_top = 30.0
-margin_right = 327.0
-margin_bottom = 46.0
+[node name="VolVoces" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 164.0
+margin_right = 325.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
+value = 100.0
+tick_count = 10
+ticks_on_borders = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-margin_top = 240.0
-margin_right = 327.0
-margin_bottom = 316.0
+margin_top = 58.0
+margin_right = 325.0
+margin_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer3"]
-margin_right = 161.0
-margin_bottom = 76.0
+margin_top = 1.0
+margin_right = 160.0
+margin_bottom = 15.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Musica"
 
-[node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer3"]
-margin_left = 165.0
-margin_top = 30.0
-margin_right = 327.0
-margin_bottom = 46.0
+[node name="VolMusica" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer3"]
+margin_left = 164.0
+margin_right = 325.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
+value = 100.0
+tick_count = 10
+ticks_on_borders = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer"]
-margin_left = 331.0
-margin_right = 335.0
-margin_bottom = 385.0
+margin_left = 329.0
+margin_right = 333.0
+margin_bottom = 381.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer"]
-margin_left = 339.0
-margin_top = 34.0
-margin_right = 667.0
-margin_bottom = 350.0
+margin_left = 337.0
+margin_right = 663.0
+margin_bottom = 381.0
 size_flags_horizontal = 3
-size_flags_vertical = 6
+size_flags_vertical = 11
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_right = 328.0
-margin_bottom = 76.0
+margin_top = 9.0
+margin_right = 326.0
+margin_bottom = 23.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Dificultad"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_top = 80.0
-margin_right = 328.0
-margin_bottom = 156.0
+margin_top = 44.0
+margin_right = 326.0
+margin_bottom = 60.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer"]
-margin_right = 162.0
-margin_bottom = 76.0
+margin_top = 1.0
+margin_right = 161.0
+margin_bottom = 15.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "General"
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer"]
-margin_left = 166.0
-margin_top = 30.0
-margin_right = 328.0
-margin_bottom = 46.0
+margin_left = 165.0
+margin_right = 326.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 __meta__ = {
@@ -194,24 +206,24 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_top = 160.0
-margin_right = 328.0
-margin_bottom = 236.0
+margin_top = 80.0
+margin_right = 326.0
+margin_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer2"]
-margin_right = 162.0
-margin_bottom = 76.0
+margin_top = 1.0
+margin_right = 161.0
+margin_bottom = 15.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Voces"
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer2"]
-margin_left = 166.0
-margin_top = 30.0
-margin_right = 328.0
-margin_bottom = 46.0
+margin_left = 165.0
+margin_right = 326.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 __meta__ = {
@@ -219,29 +231,59 @@ __meta__ = {
 }
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_top = 240.0
-margin_right = 328.0
-margin_bottom = 316.0
+margin_top = 117.0
+margin_right = 326.0
+margin_bottom = 133.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer3"]
-margin_right = 162.0
-margin_bottom = 76.0
+margin_top = 1.0
+margin_right = 161.0
+margin_bottom = 15.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Musica"
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer3"]
-margin_left = 166.0
-margin_top = 30.0
-margin_right = 328.0
-margin_bottom = 46.0
+margin_left = 165.0
+margin_right = 326.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control5" type="Control" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
+margin_top = 145.0
+margin_right = 326.0
+margin_bottom = 344.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.16
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
+margin_top = 348.0
+margin_right = 326.0
+margin_bottom = 381.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Aceptar" type="Button" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+margin_right = 161.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Aceptar"
+
+[node name="Volver" type="Button" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+margin_left = 165.0
+margin_right = 326.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Volver"
 
 [node name="Control6" type="Control" parent="VBoxContainer/HBoxContainer"]
 margin_left = 854.0
@@ -258,3 +300,9 @@ margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
+
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer/VolGeneral" to="." method="_on_VolGeneral_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer2/VolVoces" to="." method="_on_VolVoces_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer/HBoxContainer3/VolMusica" to="." method="_on_VolMusica_value_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer4/Aceptar" to="." method="_on_Aceptar_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer4/Volver" to="." method="_on_Volver_pressed"]
