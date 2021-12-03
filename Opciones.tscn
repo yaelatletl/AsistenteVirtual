@@ -63,9 +63,9 @@ margin_right = 670.0
 margin_bottom = 388.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer"]
-margin_top = 153.0
+margin_top = 173.0
 margin_right = 325.0
-margin_bottom = 227.0
+margin_bottom = 207.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
@@ -77,6 +77,7 @@ size_flags_vertical = 6
 text = "Audio"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
+visible = false
 margin_top = 18.0
 margin_right = 325.0
 margin_bottom = 34.0
@@ -105,9 +106,10 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-margin_top = 38.0
+visible = false
+margin_top = 18.0
 margin_right = 325.0
-margin_bottom = 54.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
@@ -133,9 +135,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
+margin_top = 18.0
 margin_right = 325.0
-margin_bottom = 74.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
@@ -173,14 +175,16 @@ size_flags_horizontal = 3
 size_flags_vertical = 11
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_top = 9.0
+visible = false
+margin_top = 15.0
 margin_right = 326.0
-margin_bottom = 23.0
+margin_bottom = 29.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Dificultad"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
+visible = false
 margin_top = 44.0
 margin_right = 326.0
 margin_bottom = 60.0
@@ -206,9 +210,10 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_top = 80.0
+visible = false
+margin_top = 49.0
 margin_right = 326.0
-margin_bottom = 96.0
+margin_bottom = 65.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
@@ -231,9 +236,10 @@ __meta__ = {
 }
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_top = 117.0
+visible = false
+margin_top = 56.0
 margin_right = 326.0
-margin_bottom = 133.0
+margin_bottom = 72.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 
@@ -256,15 +262,14 @@ __meta__ = {
 }
 
 [node name="Control5" type="Control" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_top = 145.0
 margin_right = 326.0
-margin_bottom = 344.0
+margin_bottom = 324.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.16
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2"]
-margin_top = 348.0
+margin_top = 328.0
 margin_right = 326.0
 margin_bottom = 381.0
 size_flags_horizontal = 3
@@ -272,7 +277,7 @@ size_flags_vertical = 3
 
 [node name="Aceptar" type="Button" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer4"]
 margin_right = 161.0
-margin_bottom = 33.0
+margin_bottom = 53.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Aceptar"
@@ -280,7 +285,7 @@ text = "Aceptar"
 [node name="Volver" type="Button" parent="VBoxContainer/HBoxContainer/Panel/HBoxContainer/VBoxContainer2/HBoxContainer4"]
 margin_left = 165.0
 margin_right = 326.0
-margin_bottom = 33.0
+margin_bottom = 53.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Volver"
