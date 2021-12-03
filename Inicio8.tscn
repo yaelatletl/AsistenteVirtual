@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://imgs/free-lo-fi-type-beat-japan-prod-roko-tensei-gc (mp3cut.net).ogg" type="AudioStream" id=1]
-[ext_resource path="res://imgs/saludo.webm" type="VideoStream" id=2]
+[ext_resource path="res://Label8.gd" type="Script" id=2]
 [ext_resource path="res://VideoPlayer.gd" type="Script" id=3]
-[ext_resource path="res://Label.gd" type="Script" id=4]
+[ext_resource path="res://imgs/2saludo1.webm" type="VideoStream" id=4]
 
 [node name="Spatial" type="Spatial"]
 
@@ -15,42 +15,36 @@ autoplay = true
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-stream = ExtResource( 2 )
+stream = ExtResource( 4 )
 autoplay = true
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 745.0
-margin_top = 561.0
-margin_right = 1005.0
-margin_bottom = 591.0
+[node name="Label8" type="Label" parent="."]
+margin_left = 857.013
+margin_top = 538.815
+margin_right = 1017.01
+margin_bottom = 593.815
+rect_pivot_offset = Vector2( -1448.38, -468.668 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Presiona Enter para continuar"
 uppercase = true
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 69.3848
-margin_top = 459.184
+margin_top = 418.73
 margin_right = 666.385
-margin_bottom = 696.184
+margin_bottom = 655.73
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "¡HOLA! Parece que este es el inicio de nuestra ejercitacion.
-
- Estoy muy emocionada por ayudarte, por favor repite los movimientos que yo haga.
-
- Ejercita de manera muy lento y espera cada 5 segundos para hacer repeticiones.
-
- Estare realizandolos hasta que hayas terminado"
+text = "Ahora te pedire que te levantes porque ya vamos a comenzar con ejercicios simples pero de mucha ayuda"
 __meta__ = {
 "_edit_use_anchors_": false
 }

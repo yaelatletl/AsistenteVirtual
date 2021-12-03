@@ -1,10 +1,13 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Font.res" type="DynamicFont" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://MenuBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Opciones.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Inicio.tscn" type="PackedScene" id=5]
+[ext_resource path="res://imgs/free-lo-fi-type-beat-japan-prod-roko-tensei-gc (mp3cut.net).ogg" type="AudioStream" id=6]
+[ext_resource path="res://imgs/eee.png" type="Texture" id=7]
+[ext_resource path="res://imgs/caca.bmp" type="Texture" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -25,10 +28,10 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.658824, 1, 1, 0.309804 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.658824, 0.8, 0.784314, 0.945098 )
 border_width_left = 5
 border_width_top = 5
@@ -43,7 +46,7 @@ corner_radius_bottom_left = 20
 shadow_size = 5
 shadow_offset = Vector2( 3, 3 )
 
-[sub_resource type="Theme" id=4]
+[sub_resource type="Theme" id=6]
 default_font = ExtResource( 1 )
 /fonts/Default = null
 Button/styles/disabled = SubResource( 1 )
@@ -51,15 +54,15 @@ Button/styles/focus = SubResource( 1 )
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 1 )
 Button/styles/pressed = SubResource( 3 )
-Panel/styles/panel = SubResource( 5 )
-PanelContainer/styles/panel = SubResource( 6 )
+Panel/styles/panel = SubResource( 4 )
+PanelContainer/styles/panel = SubResource( 5 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource( 4 )
+theme = SubResource( 6 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -89,6 +92,11 @@ margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Sprite2" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 512.251, 301.947 )
+scale = Vector2( 0.795557, 0.832252 )
+texture = ExtResource( 8 )
+
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 685.0
 margin_right = 1024.0
@@ -116,6 +124,16 @@ margin_bottom = 418.0
 text = "Salir"
 
 [node name="Spatial" parent="." instance=ExtResource( 3 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -2.0
+autoplay = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 275.461, 147.795 )
+scale = Vector2( 0.800236, 0.824781 )
+texture = ExtResource( 7 )
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Iniciar" to="." method="_on_Iniciar_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Opciones" to="." method="_on_Opciones_pressed"]

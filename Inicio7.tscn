@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://imgs/free-lo-fi-type-beat-japan-prod-roko-tensei-gc (mp3cut.net).ogg" type="AudioStream" id=1]
-[ext_resource path="res://imgs/saludo.webm" type="VideoStream" id=2]
+[ext_resource path="res://Label7.gd" type="Script" id=2]
 [ext_resource path="res://VideoPlayer.gd" type="Script" id=3]
-[ext_resource path="res://Label.gd" type="Script" id=4]
+[ext_resource path="res://imgs/2saludo.webm" type="VideoStream" id=4]
 
 [node name="Spatial" type="Spatial"]
 
@@ -15,42 +15,37 @@ autoplay = true
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-stream = ExtResource( 2 )
+stream = ExtResource( 4 )
 autoplay = true
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 745.0
-margin_top = 561.0
-margin_right = 1005.0
-margin_bottom = 591.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Presiona Enter para continuar"
-uppercase = true
-script = ExtResource( 4 )
+[node name="Label7" type="Label" parent="."]
+margin_left = 827.315
+margin_top = 526.088
+margin_right = 1018.32
+margin_bottom = 592.088
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 69.3848
-margin_top = 459.184
+margin_top = 418.73
 margin_right = 666.385
-margin_bottom = 696.184
+margin_bottom = 655.73
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/selection_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "¡HOLA! Parece que este es el inicio de nuestra ejercitacion.
+text = "FELICIDADES
 
- Estoy muy emocionada por ayudarte, por favor repite los movimientos que yo haga.
+Es todo por hoy pero mañana vuelve por mas.
 
- Ejercita de manera muy lento y espera cada 5 segundos para hacer repeticiones.
-
- Estare realizandolos hasta que hayas terminado"
+¡Te voy a estar esperando!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
